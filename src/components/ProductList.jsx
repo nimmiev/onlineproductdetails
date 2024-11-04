@@ -15,6 +15,7 @@ function ProductList() {
     axios.get('https://fakestoreapi.com/products')
       .then(response => {
         setProducts(response.data);
+        console.log(response.data);
       })
       .catch(error => console.error("Error fetching data:", error));
   }, []);
